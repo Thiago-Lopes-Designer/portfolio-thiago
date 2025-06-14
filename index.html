@@ -11,14 +11,7 @@
   </style>
 </head>
   
-<script>
-  const menuBtn = document.getElementById('menu-btn');
-  const menu = document.getElementById('menu');
 
-  menuBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-</script>
 
 <body class="text-white font-sans antialiased bg-cover bg-center bg-no-repeat" style="background-image: url('bg-site.png');">
   <!-- HEADER COM MENU RESPONSIVO -->
@@ -142,5 +135,15 @@
   </section>
 
   <script>feather.replace()</script>
+
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+  
 </body>
 </html>
