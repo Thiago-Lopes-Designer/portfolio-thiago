@@ -15,29 +15,34 @@
 
 <body class="text-white font-sans antialiased bg-cover bg-center bg-no-repeat" style="background-image: url('bg-site.png');">
   <!-- HEADER COM MENU RESPONSIVO -->
-<header class="bg-black/40 backdrop-blur-md py-3 px-6 rounded-xl shadow-lg max-w-6xl mx-auto mt-4 flex items-center justify-between border border-white/30">
-  <!-- LOGO -->
+<header class="bg-black/40 backdrop-blur-md py-3 px-6 rounded-xl shadow-lg flex items-center justify-between border border-white/30 max-w-6xl mx-auto mt-4">
+  <!-- Logo -->
   <div class="flex items-center gap-2">
-    <img src="logo.png" alt="Logo Thiago Lopes" class="h-8">
-    <span class="text-white font-semibold hidden sm:inline">THIAGO LOPES<br><span class="text-xs text-blue-400 font-normal">MARKETING DIGITAL</span></span>
+    <img src="logo.png" alt="Logo" class="h-10">
   </div>
 
-  <!-- BOTÃO HAMBURGUER MOBILE -->
-  <button id="menu-btn" class="sm:hidden focus:outline-none">
-    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-    </svg>
+  <!-- Botão hamburguer (visível no mobile) -->
+  <button id="menu-btn" class="md:hidden text-white text-2xl">
+    ☰
   </button>
 
-  <!-- MENU DE LINKS -->
-  <nav id="menu" class="hidden absolute right-4 top-16 bg-black/80 text-white rounded-lg p-4 flex flex-col space-y-2 z-50">
-  <a href="#habilidades" class="hover:text-blue-400">Habilidades</a>
-  <a href="#portfolio" class="hover:text-blue-400">Portfólio</a>
-  <a href="#sobre" class="hover:text-blue-400">Sobre mim</a>
-  <a href="#contato" class="hover:text-blue-400">Contato</a>
-</nav>
+  <!-- Menu (visível no desktop) -->
+  <nav class="hidden md:flex gap-10 text-sm font-medium text-white">
+    <a href="#habilidades" class="hover:text-blue-400">Habilidades</a>
+    <a href="#portfolio" class="hover:text-blue-400">Portfólio</a>
+    <a href="#sobre" class="hover:text-blue-400">Sobre mim</a>
+    <a href="#contato" class="hover:text-blue-400">Contato</a>
+  </nav>
 
+  <!-- Menu Mobile (dropdown flutuante) -->
+  <nav id="menu" class="hidden absolute top-20 right-6 bg-black/80 text-white rounded-lg p-4 flex flex-col space-y-2 z-50 md:hidden">
+    <a href="#habilidades" class="hover:text-blue-400">Habilidades</a>
+    <a href="#portfolio" class="hover:text-blue-400">Portfólio</a>
+    <a href="#sobre" class="hover:text-blue-400">Sobre mim</a>
+    <a href="#contato" class="hover:text-blue-400">Contato</a>
+  </nav>
 </header>
+
 
   <!-- APRESENTAÇÃO -->
   <section class="bg-cover bg-center bg-no-repeat flex items-center justify-center" style="background-image: url('bg-site.png'); height: 100vh;">
@@ -145,6 +150,7 @@
     menu.classList.toggle('hidden');
   });
 </script>
+
   
 </body>
 </html>
