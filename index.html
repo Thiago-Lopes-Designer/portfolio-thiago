@@ -10,21 +10,40 @@
     html { scroll-behavior: smooth; }
   </style>
 </head>
+  
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
 
 <body class="text-white font-sans antialiased bg-cover bg-center bg-no-repeat" style="background-image: url('bg-site.png');">
-  <!-- HEADER -->
-  <div class="max-w-6xl w-full mx-auto px-6 mt-1">
-  <header class="bg-black/40 backdrop-blur-md py-3 px-6 rounded-xl shadow-lg flex flex-wrap items-start md:items-center justify-between border border-white/30">
-
-      <img src="logo.png" alt="Logo Thiago Lopes" class="h-10">
-      <nav class="flex gap-10 text-sm font-medium">
-        <a href="#habilidades" class="hover:text-blue-400">Habilidades</a>
-        <a href="#portfolio" class="hover:text-blue-400">Portfólio</a>
-        <a href="#sobre" class="hover:text-blue-400">Sobre mim</a>
-        <a href="#contato" class="hover:text-blue-400">Contato</a>
-      </nav>
-    </header>
+  <!-- HEADER COM MENU RESPONSIVO -->
+<header class="bg-black/40 backdrop-blur-md py-3 px-6 rounded-xl shadow-lg max-w-6xl mx-auto mt-4 flex items-center justify-between border border-white/30">
+  <!-- LOGO -->
+  <div class="flex items-center gap-2">
+    <img src="logo.png" alt="Logo Thiago Lopes" class="h-8">
+    <span class="text-white font-semibold hidden sm:inline">THIAGO LOPES<br><span class="text-xs text-blue-400 font-normal">MARKETING DIGITAL</span></span>
   </div>
+
+  <!-- BOTÃO HAMBURGUER MOBILE -->
+  <button id="menu-btn" class="sm:hidden focus:outline-none">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+  </button>
+
+  <!-- MENU DE LINKS -->
+  <nav id="menu" class="hidden sm:flex flex-col sm:flex-row sm:items-center gap-6 absolute sm:static top-full left-0 w-full sm:w-auto bg-black/90 sm:bg-transparent text-white p-6 sm:p-0 z-50">
+    <a href="#habilidades" class="hover:text-blue-400">Habilidades</a>
+    <a href="#" class="hover:text-blue-400">Portfólio</a>
+    <a href="#sobre" class="hover:text-blue-400">Sobre mim</a>
+    <a href="#contato" class="hover:text-blue-400">Contato</a>
+  </nav>
+</header>
 
   <!-- APRESENTAÇÃO -->
   <section class="bg-cover bg-center bg-no-repeat flex items-center justify-center" style="background-image: url('bg-site.png'); height: 100vh;">
